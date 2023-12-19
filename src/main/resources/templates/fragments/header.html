@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/extras/spring-security"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{layouts/layout1}">
+
+    <meta charset="UTF-8">
+    <title>Header</title>
+
+    <th:block layout:fragment="js">
+        <link th:href="@{/css/header.css}" rel="stylesheet" type="text/css" />
+    </th:block>
+
+    <th:block layout:fragment="css">
+        <script type="text/javascript" th:src="@{/js/main.js}"></script>
+    </th:block>
+
+    <div th:fragment="header">
+        <div class="top-bar">
+            <div class="con row">
+                <a href="#" class="logo block cell img-box">
+                    <img src="img/logo2.jpg" alt="로고"></a>
+                <div>
+                    <div class="navbar">
+                        <a href="#">
+                            <img src="img/weather1.png" alt="날씨아이콘">25.2&#176;</a>
+                        &#124;
+                        <a href="#">로그인</a>
+                        &#124;
+                        <a href="#" id="join">회원가입</a>
+                    </div>
+                    <div class="icon">
+                        <input name="searchQuery" type="text"  placeholder="검색" id="minisearch">
+                        <button>
+                            <a href="#"><i class="fa-solid fa-magnifying-glass" style="color: #7eff38;"></i></a>
+                        </button>
+                    </div>
+                </div>
+                <br>
+
+                <nav class="menu-box-1 cell-right">
+                    <ul class="row">
+                        <li class="cell">
+                            <a href="#" class="block">컬처</a>
+                            <div class="relative">
+                                <ul>
+                                    <li><a href="#" class="block">예술</a></li>
+                                    <li><a href="#" class="block">원데이 클래스</a></li>
+                                </ul>
+                            </div>
+                            <div class="menu-text">
+                                <span class="menu-title">Culture</span>
+                                <span class="menu-title-text">문화</span>
+                            </div>
+                        </li>
+                        <li class="cell">
+                            <a href="#" class="block">푸드</a>
+                            <div class="relative">
+                                <ul>
+                                    <li><a href="#" class="block">카페</a></li>
+                                    <li><a href="#" class="block">휴게 음식점</a></li>
+                                    <li><a href="#" class="block">일반 음식점</a></li>
+                                </ul>
+                            </div>
+                            <div class="menu-text">
+                                <span class="menu-title">Food</span>
+                                <span class="menu-title-text">음식</span>
+                            </div>
+                        </li>
+                        <li class="cell">
+                            <a href="#" class="block">쉘터</a>
+                            <div class="relative">
+                                <ul>
+                                    <li><a href="#" class="block">모텔</a></li>
+                                    <li><a href="#" class="block">호텔/리조트</a></li>
+                                    <li><a href="#" class="block">펜션/풀빌라</a></li>
+                                    <li><a href="#" class="block">글램핑/캠핑장</a></li>
+                                    <li><a href="#" class="block">게스트하우스</a></li>
+                                </ul>
+                            </div>
+                            <div class="menu-text">
+                                <span class="menu-title">Shelter</span>
+                                <span class="menu-title-text">숙소</span>
+                            </div>
+                        </li>
+                        <li class="cell">
+                            <a href="#" class="block">그 외</a>
+                            <div class="relative">
+                                <ul>
+                                    <li><a href="#" class="block">액티비티</a></li>
+                                    <li><a href="#" class="block">공지사항</a></li>
+                                </ul>
+                            </div>
+                            <div class="menu-text">
+                                <span class="menu-title">ETC</span>
+                                <span class="menu-title-text">그 외(기타)</span>
+                            </div>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+
+    </div><!-- header -->
+</html>

@@ -1,0 +1,30 @@
+    @charset "UTF-8";
+
+    a{text-decoration-line: none; color: #333; font-size: 7px;}
+
+    .All_login{width: 1900px;}
+
+    .mainlogin{width: 550px; height: 420px; border: 1px solid #C3C3C3; border-radius: 5px;
+    margin-left: auto; margin-right: auto; margin-top: 400px;}
+    .login{font-size: 30px; margin-top: 52px; margin-left: 230px}
+
+    .loginbox{padding: 30px 0px 60px 0px;}
+    .id_pwd{width: 410px; margin-left: auto; margin-right: auto;}
+
+    .idbox, .pwdbox{width: 400px; height: 50px; background-color: aliceblue; color: white;
+    border: none; margin: 5px 0px; padding-left: 10px; border-radius: 5px;}
+
+    .loginbtn{width: 410px; height: 50px; background-color: green; color: white;
+    border: none; margin-top: 5px; border-radius: 5px;}
+    .loginbtn1{width: 75px; height: 90px; position: relative; left: 20px; bottom: 20px;}
+
+    .find_login{display: flex; margin-top: 40px; margin-left: 76px;}
+    .miniline{width: 1px; height: 12px; background-color: #C3C3C3;
+    margin-top: 2px; margin-left: 45px; margin-right: 27px;}
+
+    .sublogin{width: 550px; height: 190px; border: 1px solid #C3C3C3; border-radius: 5px; margin-top: 20px;
+    margin-left: auto; margin-right: auto;}
+    .login2{width: 550px; font-size: 17px; padding: 30px 0px 30px 0px; text-align: center;}
+
+    .sublogin_icon{margin-left: 51px}
+    .Web_icon{margin: 0px 27px;}

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>sideBar</title>
+
+    <link th:href="@{/css/sideBar.css}" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <script src="https://kit.fontawesome.com/2c827c8cca.js" crossorigin="anonymous"></script>
+    <!-- 링크 써야 아이콘이 들어감!! -->
+
+    <!-- 픽스 버튼 4개 -->
+    <div class="scrollbtn-group active">
+        <div class="write-btn">
+            <button class="user-write" title="글쓰기">
+                <a href="#">
+                    <p id="write"><strong>글쓰기</strong></p>
+                    <span class="user-write-i">
+								<i class="fa-regular fa-pen-to-square" style="color: #ffffff;"></i>
+							</span>
+                </a>
+            </button>
+        </div>
+        <div class="mypage-btn">
+            <button class="user-page" title="나의 페이지로 들어가기">
+                <a href="#">
+                    <p><strong>나의 페이지</strong></p>
+                    <span class="user-page-i">
+								<i class="fa-regular fa-circle-user" style="color: #ffffff;"></i>
+							</span>
+                </a>
+            </button>
+        </div>
+        <div class="save-btn">
+            <button class="user-save" title="북마크로 들어가기">
+                <a href="#">
+                    <p><strong>북마크</strong></p>
+                    <span class="user-save-i">
+								<i class="fa-solid fa-bookmark" style="color: #ffffff;"></i>
+							</span>
+                </a>
+            </button>
+        </div>
+        <div class="notice-btn">
+            <button class="notice-service" title="공지사항으로 들어가기">
+                <a href="#">
+                    <p><strong>공지사항</strong></p>
+                    <span class="notice-service-i">
+								<i class="fa-regular fa-circle-question" style="color: #ffffff;"></i>
+							</span>
+                </a>
+            </button>
+        </div>
+        <div class="kakao-btn">
+            <button class="user-kakao" title="카카오톡 문의하기">
+                <a href="#">
+                    <p><strong>카카오톡 문의</strong></p>
+                    <span class="user-kakao-i">
+							<i class="fa-solid fa-comment" style="color: #ffffff;"></i>
+						</span>
+                </a>
+            </button>
+        </div>
+    </div> <!-- 픽스 버튼 4개 -->
+
+
+
+</html>

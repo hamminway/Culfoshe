@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/extras/spring-security"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{layouts/layout1}">
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>index</title>
+
+    <th:block layout:fragment="css">
+        <link th:href="@{/css/index.css}" rel="stylesheet" type="text/css" />
+    </th:block>
+
+
+    <!-- main -->
+    <div layout:fragment="content" class="main con border">
+        <div class="main-1">
+            <div class="main-section">
+
+                <div class="main-search">
+                    <input class="main-search-int" type="text" placeholder="검색어를 입력하세요.">
+                    <button><i class="fa-solid fa-xmark" style="color: #c8d2e5;"/></button>
+                    <button class="main-searchbtn"><i class="fa-solid fa-magnifying-glass" style="color: #c8d2e5"/> </button>
+                </div> <!--main-searchint-->
+
+                <div class="main-catgy">
+                    <select>
+                        <option>카테고리</option>
+                        <option>컬처</option>
+                        <option>푸드</option>
+                        <option>쉘터</option>
+                        <option>그 외</option>
+                    </select>
+                    <select>
+                        <option>지역 </option>
+                        <option>서울</option>
+                        <option>경기</option>
+                        <option>인천</option>
+                        <option>강원</option>
+                        <option>충북</option>
+                        <option>충남</option>
+                        <option>대전</option>
+                        <option>대구</option>
+                        <option>부산</option>
+                        <option>울산</option>
+                        <option>경북</option>
+                        <option>경남</option>
+                        <option>광주</option>
+                        <option>전북</option>
+                        <option>전남</option>
+                        <option>제주</option>
+                    </select>
+                    <select>
+                        <option>인원</option>
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5명 이상</option>
+                        <option>10명 이상</option>
+                    </select>
+                </div> <!--main-catgy-->
+            </div>
+
+            <div class="slider">
+                <div><img th:src="@{/img/img111.png}" alt=""></div>
+                <div><img th:src="@{/img/img222.png}" alt=""></div>
+                <div><img th:src="@{/img/main-img3.jpg}" alt=""></div>
+                <div><img th:src="@{/img/main-img4.jpg}" alt=""></div>
+                <div><img th:src="@{/img/main-img5.jpg}" alt=""></div>
+            </div>
+        </div><!--main-1-->
+
+
+        <div class="main-2 con">
+            <!-- 메인 지도 -->
+            <h2>지도 🗺️</h2>
+            <div class="map">
+                <button>+</button>
+                <button>-</button>
+            </div>
+
+
+        </div> <!--main-2-->
+
+        <div class="main-3">
+            <div class="recmd con">
+                <h2>지역별 추천 👍🏻</h2>
+                <br>
+                <div class="recmdheader">
+                    <ul class="recmdli">
+                        <li><a href="#">서울</a></li>
+                    </ul>
+                    <ul class="recmdli">
+                        <li><a href="#">인천</a></li>
+                    </ul>
+                    <ul class="recmdli">
+                        <li><a href="#">대전</a></li>
+                    </ul>
+                    <ul class="recmdli">
+                        <li><a href="#">대구</a></li>
+                    </ul>
+                    <ul class="recmdli">
+                        <li><a href="#">부산</a></li>
+                    </ul>
+                    <ul class="recmdli">
+                        <li><a href="#">울산</a></li>
+                    </ul>
+                    <ul class="recmdli">
+                        <li><a href="#">광주</a></li>
+                    </ul>
+                    <ul class="recmdli">
+                        <li><a href="#">제주</a></li>
+                    </ul>
+                </div>
+
+                <div class="recmdbox">
+                    <i class="fa-solid fa-angle-left recmdbox-leftbtn" style="color: #247b29;"/>
+
+                    <div id="slider-div">
+                        <div>
+                            <ul class="recmdbox-in recmdbox-in-margin">
+                                <a href="#"><img src="./img/food1-1.jpg">
+                                    <li>가게이름 : 난포
+                                        <i class="fa-regular fa-bookmark bmicon1" style="color: #000000;"/>
+                                    </li></a>
+                                <li>대표메뉴 : 강된장쌈밥, 곰탕</li>
+                                <li>가게주소 : 서울 성동구 서울숲 4길</li>
+                                <li class="recmdbox-li-re"> 18-8 지층</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <ul class="recmdbox-in recmdbox-in-margin-left">
+                                <a href="#"><img src="./img/food2.jpg">
+                                    <li>가게이름 : 포피나
+                                        <i class="fa-regular fa-bookmark bmicon2" style="color: #000000;"/>
+                                    </li></a>
+                                <li>대표메뉴 : 뇨끼, 라자냐</li>
+                                <li>가게주소 : 서울 성동구 서울숲</li>
+                                <li class="recmdbox-li-re">2길 13 1층</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <ul class="recmdbox-in " style="margin-left: 21px;">
+                                <a href="#"><img src="./img/food3.jpg">
+                                    <li>가게이름 : 구아바
+                                        <i class="fa-regular fa-bookmark bmicon2" style="color: #000000;"/>
+                                    </li></a>
+                                <li>대표메뉴 : Guabar Lime Cooler</li>
+                                <li>가게주소 : 서울 성동구 성수이로</li>
+                                <li class="recmdbox-li-re">14길 7 3층</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <ul class="recmdbox-in recmdbox-in-margin">
+                                <a href="#"><img src="./img/food4-1.jpg">
+                                    <li>가게이름 : 핏제리아오 대학로본점
+                                        <i class="fa-regular fa-bookmark bmicon3" style="color: #000000;"/>
+                                    </li></a>
+                                <li>대표메뉴 : 스텔라, 오'핏자</li>
+                                <li>가게주소 : 서울 종로구 동숭길 86</li>
+                                <li class="recmdbox-li-re">2, 3층</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <ul class="recmdbox-in recmdbox-in-margin-left">
+                                <a href="#"><img src="./img/food5-1.jpg">
+                                    <li>가게이름 : 하이디라오 건대지점
+                                        <i class="fa-regular fa-bookmark bmicon4" style="color: #000000;"/>
+                                    </li></a>
+                                <li>대표메뉴 : 훠궈, 새우완자</li>
+                                <li class="recmdbox-li-mgin">가게주소 : 서울 광진구 능동로 110</li>
+                                <li class="recmdbox-li-re">스타시티 영존 A동 2F</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <ul class="recmdbox-in recmdbox-in-margin-right">
+                                <a href="#"><img src="./img/food6-1.jpg">
+                                    <li>가게이름 : 너프
+                                        <i class="fa-regular fa-bookmark bmicon1" style="color: #000000;"/>
+                                    </li></a>
+                                <li>대표메뉴 : 바나나푸딩, 너프크림라떼</li>
+                                <li class="recmdbox-li-mgin">가게주소 : 서울 마포구 어울마당로 5길 </li>
+                                <li class="recmdbox-li-re">50 1층 201호</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <i class="fa-solid fa-angle-right recmdbox-rightbtn" style="color: #247b29;"/>
+                </div>
+            </div>
+        </div> <!--main-3-->
+    </div><!-- main -->
+
+    <th:block layout:fragment="js">
+        <script type="text/javascript" th:src="@{/js/index.js}"></script>
+    </th:block>
+</html>

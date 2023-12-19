@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/extras/spring-security"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{layouts/layout1}" >
+
+    <meta charset="UTF-8">
+    <title>Footer</title>
+
+    <link rel="stylesheet" type="text/css" th:href="@{/css/footer.css}" />
+
+    <div class="footer" th:fragment="footer">
+        <div>
+            <hr>
+            <div class="footer-top">
+                <div id="fttop11">
+                    <a href="#">공지사항</a>
+                </div>
+                |
+                <div id="fttop12">
+                    <a href="#">개인정보<br>처리방침</a>
+                </div>
+                |
+                <div id="fttop13">
+                    <a href="#" id="t">서비스<br>이용약관 </a>
+                </div>
+            </div>
+            <hr>
+        </div>
+        <div class="footer-middle con">
+            <div class="footer-middle1">
+                <div class="fotmid"><span>회사정보</span></div>
+                <div class="fotmid-1"><span>CUL FOSHE</span></div><!-- 로고이미지 넣을 자리 -->
+                <div class="fotmid-1"><span>Email : culfoshe@gmail.com</span></div>
+            </div>
+            <div>
+                <div class="wrapper">
+                    <span>회사 계정</span>
+                    <!-- CDN에서 가져옴 -->
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                </div>
+                <div class="wrapper">
+                    <span>모바일</span>
+                    <!-- CDN에서 가져옴 -->
+                    <a href="#"><i class="fa-brands fa-apple"></i></a>
+                    <a href="#"><i class="fa-brands fa-google-play"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom con">
+            <span>Copyright &copy; CUL FOSHE All rights reserved.</span>
+        </div>
+    </div>
+</html>
