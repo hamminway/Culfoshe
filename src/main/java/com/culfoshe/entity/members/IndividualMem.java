@@ -38,26 +38,18 @@ public class IndividualMem {
     private String interest;
     private String interestArea;
 
-    private String IndividualDomain;
+    private String individualDomain;
+
+    private String pageName;
+    private String characterName;
+    private String introduction;
+
+    private String individualFolder;
+    private String individualCategory;
+    private int postNum;
 
 
 
-    public static IndividualMem createMember(IndividualMemFormDTO individualMemFormDTO, PasswordEncoder passwordEncoder) {
 
-        IndividualMem individualMem = new IndividualMem();
-
-        individualMem.setEmail(individualMemFormDTO.getEmail());
-        String password = passwordEncoder.encode(individualMemFormDTO.getPassword());
-        individualMem.setPassword(password);
-
-        individualMem.setName(individualMemFormDTO.getName());
-        individualMem.setPhoneNum(individualMemFormDTO.getPhoneNum());
-
-        individualMem.setInterest(individualMemFormDTO.getInterest());
-        individualMem.setInterestArea(individualMemFormDTO.getInterestArea());
-        individualMem.setIndividualDomain(individualMemFormDTO.getIndividualDomain());
-
-        return individualMem;
-    }
 
 }

@@ -2,7 +2,7 @@ package com.culfoshe.controller;
 
 import com.culfoshe.dto.members.IndividualMemFormDTO;
 import com.culfoshe.entity.members.IndividualMem;
-import com.culfoshe.service.IndividualMemService;
+import com.culfoshe.service.MemService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Controller;
@@ -16,7 +16,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @RequiredArgsConstructor
 public class MemberController {
 
-    private final IndividualMemService individualMemService;
+    private final MemService memService;
 
     private final PasswordEncoder passwordEncoder;
 
@@ -33,14 +33,13 @@ public class MemberController {
 
     @GetMapping(value = "/new")
     public String memberForm(Model model) {
-        model.addAttribute("memberFormDTO", new IndividualMemFormDTO());
+        model.addAttribute("IndividualMemFormDTO", new IndividualMemFormDTO());
         return "member/memberForm";
     }
 
     @PostMapping(value = "/new")
-    public String memberForm(IndividualMemFormDTO memberFormDTO) {
-        IndividualMem individualMem = IndividualMem.createMember(memberFormDTO, passwordEncoder);
-        individualMemService.saveMember(individualMem);
+    public String memberForm(IndividualMemFormDTO individualMemFormDTO) {
+        memService.saveIndividualMem(individualMemFormDTO);
         return "redirect:/";
     }
 

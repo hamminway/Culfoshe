@@ -49,25 +49,9 @@ public class PartnerMem {
 
     @Column(nullable = false)
     private String signatureMenu; //이미지
-    private String notice;
+    private String partnerNotice;
 
     @Column(nullable = false)
     private String storeImage;
 
-    public static PartnerMem createMember(PartnerMemFormDTO partnerMemFormDTO, PasswordEncoder passwordEncoder) {
-
-        PartnerMem partnerMem = new PartnerMem();
-
-        partnerMem.setEmail(partnerMemFormDTO.getEmail());
-        String password = passwordEncoder.encode(partnerMemFormDTO.getPassword());
-        partnerMem.setPassword(password);
-
-        /*partnerMem.setPresidentName(memberFormDTO.ge);*/
-        partnerMem.setName(partnerMemFormDTO.getName());
-        partnerMem.setPhoneNum(partnerMemFormDTO.getPhoneNum());
-
-        partnerMem.setPartnerDomain(partnerMemFormDTO.getPartnerDomain());
-
-        return partnerMem;
-    }
 }
