@@ -39,7 +39,9 @@ public class MemService implements UserDetailsService {
         IndividualMem findIndividualMem = individualMemRepository.findByEmail(email);
         PartnerMem findPartnerMem = partnerMemRepository.findByEmail(email);
 
-        if(findIndividualMem != null || findPartnerMem != null) {
+        if(findIndividualMem != null) {
+            throw new IllegalStateException("이미 가입된 회원입니다.");
+        } else if(findPartnerMem != null){
             throw new IllegalStateException("이미 가입된 회원입니다.");
         }
     }

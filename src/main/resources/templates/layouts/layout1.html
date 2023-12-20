@@ -7,23 +7,20 @@
 
     <!-- CSS only -->
     <!-- 링크 써야 아이콘이 들어감!! -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css">
-    <link th:href="@{/css/layout1.css}" rel="stylesheet">
 
-    <!-- JS, Popper.js, and jQuery -->
-    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
-    <script src="https://kit.fontawesome.com/2c827c8cca.js" crossorigin="anonymous"></script>
+    <link th:href="@{/css/layouts/layout1.css}" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" th:href="@{/css/fragments/header.css}" />
+    <link rel="stylesheet" type="text/css" th:href="@{/css/fragments/footer.css}" />
+    <link rel="stylesheet" type="text/css" th:href="@{/css/fragments/sideBar.css}" />
     <script type="text/javascript" src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
 
+     <th:block layout:fragment="css"></th:block>
     <th:block layout:fragment="js"></th:block>
-    <th:block layout:fragment="css"></th:block>
 </head>
 
 <body>
 
-    <!-- th:replace="[파일 경로 :: 조각 이름]" -->
+
     <div th:replace="fragments/header::header"></div>
     <div layout:fragment="content" class="content"></div>
     <div th:replace="fragments/footer::footer"></div>

@@ -17,24 +17,23 @@ import org.springframework.web.bind.annotation.RequestMapping;
 public class MemberController {
 
     private final MemService memService;
-
     private final PasswordEncoder passwordEncoder;
 
     @GetMapping(value = "/login")
     public String loginMember(){
-        return "member/memberLoginForm";
+        return "members/memberLoginForm";
     }
 
     @GetMapping(value = "/login/error")
     public String loginError(Model model){
         model.addAttribute("loginErrorMsg", "아이디 또는 비밀번호를 확인해주세요");
-        return "member/memberLoginForm";
+        return "members/memberLoginForm";
     }
 
     @GetMapping(value = "/new")
     public String memberForm(Model model) {
         model.addAttribute("IndividualMemFormDTO", new IndividualMemFormDTO());
-        return "member/memberForm";
+        return "members/memberForm";
     }
 
     @PostMapping(value = "/new")

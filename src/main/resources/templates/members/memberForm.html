@@ -1,16 +1,15 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org"
       xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
-      layout:decorate="~{layouts/layout01}">
+      layout:decorate="~{layouts/layout1}">
 
-    <meta charset="UTF-8"/>
-    <title>CUL-FOSHE 회원가입</title>
+
     <th:block layout:fragment="css">
-        <link rel="stylesheet" th:href="@{/css/memberForm.css}" />
+        <link rel="stylesheet" th:href="@{/css/members/memberForm.css}" />
     </th:block>
 
 
-<div layout:fragment="content">
+<th:block layout:fragment="content">
     <div class="joinbox">
         <h1 class="joinment">회원가입 🧚🏼‍♂️</h1>
 
@@ -512,10 +511,8 @@
         <button class="joinbtn">회원가입하기</button>
     </div>
 <!--.joinbox-->
-</div>
+</th:block>
 
-    <th:block layout:fragment="js">
-        <script type="text/javascript" th:href="@{/js/memberForm.js}" />
-    </th:block>
+
 
 </html>

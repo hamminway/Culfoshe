@@ -49,7 +49,4 @@ public class IndividualMem {
     private int postNum;
 
 
-
-
-
 }
