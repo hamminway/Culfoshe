@@ -5,11 +5,14 @@ import lombok.Getter;
 import lombok.Setter;
 import org.springframework.security.crypto.password.PasswordEncoder;
 
+import javax.validation.constraints.Email;
+
 @Getter @Setter
 public class IndividualMemFormDTO {
 
     private String name;
 
+    @Email
     private String email;
     private String password;
 

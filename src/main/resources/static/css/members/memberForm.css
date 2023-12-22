@@ -1,8 +1,11 @@
     @charset "UTF-8";
 
+    *{margin: 0px; padding: 0px;}
+    ul, li{list-style:none;}
+
     .array{display: flex;}
 
-    .joinbox{width: 1500px; padding-top: 220px; margin: 0px auto;}
+    .joinbox{width: 1500px; padding-top: 220px; margin: 0px auto; margin-bottom: 150px;}
     .joinment{margin-top: 40px; margin-left: 225px;}
 
     .member{margin-top: 50px; padding-top: 110px; width: 680px; margin-left: 410px;}
@@ -23,7 +26,7 @@
     .Allcheckbox{margin-left: 20px;}
     .Allcheckbox2{padding-left: 5px;}
 
-    .inforInputBox{display: flex; padding-bottom: 120px;}
+    .inforInputBox{display: flex; padding-bottom: 90px;}
     .inficInfor{margin-left: 240px;}
     .partnerInfor{margin-left: 50px; z-index: 0;}
     .td1{width: 150px; height: 40px;}
@@ -33,23 +36,30 @@
     .td2_2{width: 300px; height: 60px;}
     .td2_3{width: 370px; height: 70px;}
 
-    .td3_1{width: 150px; height: 42px;}
-    .td4_1{width: 300px; height: 45px;}
     .td3{width: 150px; height: 54px;}
     .td4{width: 300px; height: 55px;}
-    .td3_2{width: 150px; height: 72px;}
-    .td4_2{width: 300px; height: 72px;}
+
+    .td3_1{width: 150px; height: 42px;}
+    .td4_1{width: 300px; height: 45px;}
+    .td3_2{width: 150px; height: 77px;}
+    .td4_2{width: 300px; height: 80px;}
     .td3_3{width: 150px; height: 62px;}
     .td4_3{width: 300px; height: 65px;}
 
+    .partnerInformini{margin-top: 37px;}
+
     .checkitem{width: 300px; height: 32px; border: 1px solid #666;
         border-radius: 2px; background-color: white;}
+    .checkitem1{width: 170px; height: 32px; border: 1px solid #666;
+        border-radius: 2px; background-color: white; margin-left: 3px;}
+
     .id, .phonecheck{width: 210px; border: none;}
-    .idbtn{width: 75px; height: 25px; position: relative; top: 3px; left: 7px;
+    .domain{width: 85px; border: none;}
+
+    .btn{width: 75px; height: 25px; position: relative; bottom: -3px; left: 7px;
         background-color: green; color: white; border: none; border-radius: 5px;
         font-size: 11px;}
-
-    .telbtn{width: 75px; height: 25px; position: relative; bottom: -3px; left: 7px;
+    .domainBtn{width: 75px; height: 25px; position: relative; bottom: -3px; left: 2px;
         background-color: green; color: white; border: none; border-radius: 5px;
         font-size: 11px;}
 
@@ -58,6 +68,8 @@
     .pwd, .name, .phone, .company, .storeplace, .reprename, .managername, .managerphone{width: 300px; height: 30px;}
     .email{width: 130px; height: 30px;}
     .email2{padding: 0px 4.5px;}
+
+    .culfosheDomain{font-size: 11px; position: relative; top: 9px;}
 
     .phonereplac{margin-left: 20px;}
     .phonereplace2{margin-left: 7px; font-size: 12px;}
@@ -69,14 +81,16 @@
     .interestInfor{margin-top: 120px; padding-bottom: 120px;}
     .interestment{padding-bottom: 15px;}
 
-    .indexbox{position: relative; bottom: 612px; left: 792px;
+    .indexbox1{position: relative; bottom: 873px; left: 219px;
+        background-color: #ccc; opacity:0.2; display: none; z-index: 1;}
+    .indexbox2{position: relative; bottom: 870px; left: 795px;
         background-color: #ccc; opacity:0.2; display: none; z-index: 1;}
 
     /* interestInfor 부터 */
 
    /* #selectBox > button:hover{background-color: rgb(16, 104, 63); color: white;} */
 
-
+    .interestInfor{display: none;}
     .selectbox{margin-top: 5px;}
 
     .ckeckInterest{width: 80px; height: 35px; line-height: 35px; margin-top: 5px; margin-left: 10px;
@@ -101,5 +115,5 @@
     /* interestlocal 부터*/
     .arraybox1, .arraybox2{display: flex;}
 
-    .joinbtn{width: 150px; height: 50px; font-size: 17px; margin-bottom: 50px; margin-left: 1120px;
-    color: white; background-color: green; border: none; border-radius: 5px;}
+    .joinbtn{width: 200px; height: 50px; font-size: 17px; margin-left: 1060px;
+    color: white; background-color: green; border: none; border-radius: 5px; margin-top: 30px; display: none;}

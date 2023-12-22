@@ -26,13 +26,17 @@ public class MemService implements UserDetailsService {
     private final PasswordEncoder passwordEncoder;
 
     public IndividualMem saveIndividualMem(IndividualMemFormDTO individualMemFormDTO) {
-        validateDulicateMember(individualMemFormDTO.getEmail());
-        return individualMemRepository.save(IndividualMemFormDTO.createIndividualMem(individualMemFormDTO, passwordEncoder));
+        IndividualMem individualMem = IndividualMemFormDTO.createIndividualMem(individualMemFormDTO, passwordEncoder);
+
+        validateDulicateMember(individualMem.getEmail());
+        return individualMemRepository.save(individualMem);
     }
 
     public PartnerMem savePartnerMem(PartnerMemFormDTO partnerMemFormDTO){
+        PartnerMem partnerMem = PartnerMemFormDTO.createPartnerMem(partnerMemFormDTO, passwordEncoder);
+
         validateDulicateMember(partnerMemFormDTO.getEmail());
-        return partnerMemRepository.save(PartnerMemFormDTO.createPartnerMem(partnerMemFormDTO, passwordEncoder));
+        return partnerMemRepository.save(partnerMem);
     }
 
     private void validateDulicateMember(String email) {
@@ -46,21 +50,21 @@ public class MemService implements UserDetailsService {
         }
     }
 
-
-    //memberRepository에서 받는 String id로 변경해줘야함
     @Override
     public UserDetails loadUserByUsername(String email)
                                     throws UsernameNotFoundException {
         IndividualMem individualMem = individualMemRepository.findByEmail(email);
+        PartnerMem partnerMem = partnerMemRepository.findByEmail(email);
 
        if(individualMem == null){
+           throw new UsernameNotFoundException(email);
+       } else if(partnerMem == null) {
            throw new UsernameNotFoundException(email);
        }
 
        return User.builder()
                .username(individualMem.getEmail())
                .password(individualMem.getPassword())
-               /*.roles(individualMem.getRole().toString())  //사용자 권한 설정*/
                .build();
     }
 }
