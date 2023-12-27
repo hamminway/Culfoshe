@@ -119,29 +119,40 @@
 
 
   $(document).ready(function() {
+
+    $("#indic").click(function() {
+
+      $("#interestInfor").show();
+      $("#indicJoinBtn").show();
+      $("#partJoinBtn").hide();
+
+      $("#partnerInfor").css({"position":"relative", "right":"501px", "width": "490px"});
+      $("#interestInfor").css({"position":"relative", "top":"350px"});
+
+      $(".indexbox1").hide();
+      $(".indexbox2").show();
+      $(".indexbox2").css({"width":"500px", "height":"790px"});
+      $("#allInfor").css({"width":"1500px", "height":"1400px"});
+
+    });
+
     $("#partner").click(function() {
 
+      $("#interestInfor").hide();
       $("#indicJoinBtn").hide();
       $("#partJoinBtn").show();
+      $("#partJoinBtn").css({"display": "block", "position": "relative", "right": "764px", "top": "180px"});
+
+      $("#inficInfor").css({"width": "520px"});
+      $("#partnerInfor").css({"position":"relative", "right":"1px"});
 
       $(".indexbox1").show();
       $(".indexbox2").hide();
       $(".indexbox1").css({"width":"500px", "height":"550px"});
       $("#allInfor").css({"width":"1500px", "height":"1400px"});
+
     });
-
-    $("#indic").click(function() {
-
-    $(".interestInfor").show();
-    $("#indicJoinBtn").show();
-    $("#partJoinBtn").hide();
-
-    $(".indexbox1").hide();
-    $(".indexbox2").show();
-    $(".indexbox2").css({"width":"500px", "height":"790px"});
-    $("#allInfor").css({"width":"1500px", "height":"1400px"});
-  });
-})
+  })
 
 
   /*
@@ -464,253 +475,83 @@
     let interest18 = document.getElementById('interest18')
 
   interest1.addEventListener("click", function(){
-    cssChange1();
+    cssChange(interest1);
   })
-
-  function cssChange1() {
-    if(interest1.style.backgroundColor == "rgb(16, 104, 63)"){
-      interest1.style.color = "white";
-      interest1.style.backgroundColor = "rgb(16, 104, 63)";
-    }else{
-      interest1.style.color = "white";
-      interest1.style.backgroundColor = "rgb(16, 104, 63)";
-    }
-  }
 
   interest2.addEventListener("click", function(){
-    cssChange2();
+    cssChange(interest2);
   })
-
-  function cssChange2() {
-    if(interest2.style.color == "rgb(16, 104, 63)"){
-      interest2.style.color = "white";
-      interest2.style.backgroundColor = "rgb(16, 104, 63)";
-    }else{
-      interest2.style.color = "rgb(16, 104, 63)";
-      interest2.style.backgroundColor = "white";
-    }
-  }
 
   interest3.addEventListener("click", function(){
-    cssChange3();
+    cssChange(interest3);
   })
-
-  function cssChange3() {
-    if(interest3.style.color == "rgb(16, 104, 63)"){
-      interest3.style.color = "white";
-      interest3.style.backgroundColor = "rgb(16, 104, 63)";
-    }else{
-      interest3.style.color = "rgb(16, 104, 63)";
-      interest3.style.backgroundColor = "white";
-    }
-  }
 
   interest4.addEventListener("click", function(){
-    cssChange4();
+    cssChange(interest4);
   })
-
-  function cssChange4() {
-    if(interest4.style.color == "rgb(16, 104, 63)"){
-      interest4.style.color = "white";
-      interest4.style.backgroundColor = "rgb(16, 104, 63)";
-    }else{
-      interest4.style.color = "rgb(16, 104, 63)";
-      interest4.style.backgroundColor = "white";
-    }
-  }
 
   interest5.addEventListener("click", function(){
-    cssChange5();
+    cssChange(interest5);
   })
-
-  function cssChange5() {
-    if(interest5.style.color == "rgb(16, 104, 63)"){
-      interest5.style.color = "white";
-      interest5.style.backgroundColor = "rgb(16, 104, 63)";
-    }else{
-      interest5.style.color = "rgb(16, 104, 63)";
-      interest5.style.backgroundColor = "white";
-    }
-  }
 
   interest6.addEventListener("click", function(){
-    cssChange6();
+    cssChange(interest6);
   })
-
-  function cssChange6() {
-    if(interest6.style.color == "rgb(16, 104, 63)"){
-      interest6.style.color = "white";
-      interest6.style.backgroundColor = "rgb(16, 104, 63)";
-    }else{
-      interest6.style.color = "rgb(16, 104, 63)";
-      interest6.style.backgroundColor = "white";
-    }
-  }
 
   interest7.addEventListener("click", function(){
-    cssChange7();
+    cssChange(interest7);
   })
-
-  function cssChange7() {
-    if(interest7.style.backgroundColor == "rgb(16, 104, 63)"){
-      interest7.style.color = "black";
-      interest7.style.backgroundColor = "white";
-    }else{
-      interest7.style.color = "white";
-      interest7.style.backgroundColor = "rgb(16, 104, 63)";
-    }
-  }
 
   interest8.addEventListener("click", function(){
-    cssChange8();
+    cssChange(interest8);
   })
-
-  function cssChange8() {
-    if(interest8.style.backgroundColor == "rgb(16, 104, 63)"){
-      interest8.style.color = "black";
-      interest8.style.backgroundColor = "white";
-    }else{
-      interest8.style.color = "white";
-      interest8.style.backgroundColor = "rgb(16, 104, 63)";
-    }
-  }
 
 	interest9.addEventListener("click", function(){
-    cssChange9();
+    cssChange(interest9);
   })
-
-  function cssChange9() {
-    if(interest9.style.backgroundColor == "rgb(16, 104, 63)"){
-      interest9.style.color = "black";
-      interest9.style.backgroundColor = "white";
-    }else{
-      interest9.style.color = "white";
-      interest9.style.backgroundColor = "rgb(16, 104, 63)";
-    }
-  }
 
   interest10.addEventListener("click", function(){
-    cssChange10();
+    cssChange(interest10);
   })
-
-  function cssChange10() {
-    if(interest10.style.backgroundColor == "rgb(16, 104, 63)"){
-      interest10.style.color = "black";
-      interest10.style.backgroundColor = "white";
-    }else{
-      interest10.style.color = "white";
-      interest10.style.backgroundColor = "rgb(16, 104, 63)";
-    }
-  }
 
   interest11.addEventListener("click", function(){
-    cssChange11();
+    cssChange(interest11);
   })
-
-  function cssChange11() {
-    if(interest11.style.backgroundColor == "rgb(16, 104, 63)"){
-      interest11.style.color = "black";
-      interest11.style.backgroundColor = "white";
-    }else{
-      interest11.style.color = "white";
-      interest11.style.backgroundColor = "rgb(16, 104, 63)";
-    }
-  }
 
   interest12.addEventListener("click", function(){
-    cssChange12();
+    cssChange(interest12);
   })
-
-  function cssChange12() {
-    if(interest12.style.backgroundColor == "rgb(16, 104, 63)"){
-      interest12.style.color = "black";
-      interest12.style.backgroundColor = "white";
-    }else{
-      interest12.style.color = "white";
-      interest12.style.backgroundColor = "rgb(16, 104, 63)";
-    }
-  }
 
   interest13.addEventListener("click", function(){
-    cssChange13();
+    cssChange(interest13);
   })
-
-  function cssChange13() {
-    if(interest13.style.backgroundColor == "rgb(16, 104, 63)"){
-      interest13.style.color = "black";
-      interest13.style.backgroundColor = "white";
-    }else{
-      interest13.style.color = "white";
-      interest13.style.backgroundColor = "rgb(16, 104, 63)";
-    }
-  }
 
   interest14.addEventListener("click", function(){
-    cssChange14();
+    cssChange(interest14);
   })
-
-  function cssChange14() {
-    if(interest14.style.backgroundColor == "rgb(16, 104, 63)"){
-      interest14.style.color = "black";
-      interest14.style.backgroundColor = "white";
-    }else{
-      interest14.style.color = "white";
-      interest14.style.backgroundColor = "rgb(16, 104, 63)";
-    }
-  }
 
   interest15.addEventListener("click", function(){
-    cssChange15();
+    cssChange(interest15);
   })
-
-  function cssChange15() {
-    if(interest15.style.backgroundColor == "rgb(16, 104, 63)"){
-      interest15.style.color = "black";
-      interest15.style.backgroundColor = "white";
-    }else{
-      interest15.style.color = "white";
-      interest15.style.backgroundColor = "rgb(16, 104, 63)";
-    }
-  }
 
   interest16.addEventListener("click", function(){
-    cssChange16();
+    cssChange(interest16);
   })
-
-  function cssChange16() {
-    if(interest16.style.backgroundColor == "rgb(16, 104, 63)"){
-      interest16.style.color = "black";
-      interest16.style.backgroundColor = "white";
-    }else{
-      interest16.style.color = "white";
-      interest16.style.backgroundColor = "rgb(16, 104, 63)";
-    }
-  }
 
   interest17.addEventListener("click", function(){
-    cssChange17();
+    cssChange(interest17);
   })
-
-  function cssChange17() {
-    if(interest17.style.backgroundColor == "rgb(16, 104, 63)"){
-      interest17.style.color = "black";
-      interest17.style.backgroundColor = "white";
-    }else{
-      interest17.style.color = "white";
-      interest17.style.backgroundColor = "rgb(16, 104, 63)";
-    }
-  }
 
   interest18.addEventListener("click", function(){
-    cssChange18();
+    cssChange(interest18);
   })
 
-  function cssChange18() {
-    if(interest18.style.backgroundColor == "rgb(16, 104, 63)"){
-      interest18.style.color = "black";
-      interest18.style.backgroundColor = "white";
+  function cssChange(a) {
+    if(a.style.backgroundColor == "rgb(16, 104, 63)"){
+      a.style.color = "black";
+      a.style.backgroundColor = "white";
     }else{
-      interest18.style.color = "white";
-      interest18.style.backgroundColor = "rgb(16, 104, 63)";
+      a.style.color = "white";
+      a.style.backgroundColor = "rgb(16, 104, 63)";
     }
   }
